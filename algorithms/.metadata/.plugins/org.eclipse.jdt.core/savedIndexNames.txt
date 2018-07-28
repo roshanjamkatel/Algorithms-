@@ -1,0 +1,2 @@
+INDEX VERSION 1.130+C:\Users\rosha\Desktop\Projects\algorithms\.metadata\.plugins\org.eclipse.jdt.core
+483546182.index

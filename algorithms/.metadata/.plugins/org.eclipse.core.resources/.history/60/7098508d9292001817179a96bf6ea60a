@@ -1,0 +1,30 @@
+import java.util.*;
+
+public class collatzConjecture {
+	static int cnt=0;
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter a number > 1");
+		int x = scan.nextInt();
+		System.out.print("Would you like to see the steps aswell? (y/n)");
+		String ans = scan.nextLine();
+		scan.close();
+		collatzConjectureM(x);
+		if(ans== "y") System.out.println("steps to do the Collatz Conjecture" + cnt);
+		
+		
+	}
+	
+	public static void collatzConjectureM (int x) {
+		cnt++;
+		System.out.println(x + " ");
+		if (x == 1) return;
+		else if (x % 2 == 0) {
+			collatzConjectureM(x/2);
+		}
+		else {
+			collatzConjectureM(3*x +1);
+		}
+	}
+}

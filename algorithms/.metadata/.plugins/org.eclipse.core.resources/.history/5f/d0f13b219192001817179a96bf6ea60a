@@ -1,0 +1,28 @@
+import java.util.*;
+
+public class collatzConjecture {
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Enter a number > 1");
+		int x = scan.nextInt();
+		scan.close();
+		System.out.println(collatzConjectureM(x));
+	}
+	
+	public static int collatzConjectureM (int x) {
+		
+		int cnt = 0;
+		while(x != 1) {
+			if(x % 2 == 0) {
+				x /= 2;
+				cnt++;
+			}
+			else {
+				x *= 3;
+				x += 1;
+			}	
+		}
+		return cnt;
+	}
+}
